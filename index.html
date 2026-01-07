@@ -3,103 +3,121 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MARWAL Handmade</title>
+<title>Marwal Handmade</title>
 
-<!-- Google Fonts للخطوط الانسحابية والمتنوعة -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
 <style>
-    body {
-        font-family: 'Roboto', sans-serif;
-        margin: 0;
-        padding: 0;
-        background: #f2e4d5; /* بيج رملي */
-        color: #333;
+    body{
+        font-family:'Roboto',sans-serif;
+        margin:0;
+        padding:0;
+        background:#e7d8bd; /* بيج رملي */
+        color:#333;
     }
 
-    header {
-        text-align: center;
-        padding: 50px 20px;
-        background-color: #556b2f; /* زيتى داكن */
+    header{
+        text-align:center;
+        padding:70px 20px;
+        background:#233416; /* زيتي داكن أشيك */
     }
 
-    header h1 {
-        font-family: 'Great Vibes', cursive; /* خط انسحابي */
-        font-size: 4em;
-        color: #fff;
-        margin: 0;
+    header h1{
+        font-family:'Great Vibes',cursive;
+        font-size:4.5em;
+        color:#e7d8bd;  /* اسم Marwal بيج رملي */
+        margin:0;
     }
 
-    header p {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 1.2em;
-        color: #f5f5dc;
+    header p{
+        font-family:'Montserrat',sans-serif;
+        color:#f5f5dc;
+        margin-top:10px;
+        font-size:1.2em;
     }
 
-    .products {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 40px 20px;
+    /* قسم المنتجات */
+    .products{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+        padding:40px 20px;
     }
 
-    .product {
-        background: #fff;
-        border-radius: 12px;
-        margin: 15px;
-        padding: 15px;
-        width: 280px;
-        text-align: center;
-        box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-        font-family: 'Montserrat', sans-serif;
+    .product{
+        background:white;
+        border-radius:14px;
+        margin:15px;
+        width:280px;
+        text-align:center;
+        padding:15px;
+        box-shadow:0 8px 15px rgba(0,0,0,0.12);
     }
 
-    .product img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 10px;
+    .product img{
+        width:100%;
+        height:180px;
+        object-fit:cover;
+        border-radius:12px;
     }
 
-    .product h3 {
-        margin: 10px 0;
-        color: #556b2f; /* زيتي داكن */
-        font-family: 'Roboto', sans-serif;
-        font-weight: 700;
+    .product h3{
+        font-family:'Montserrat',sans-serif;
+        color:#233416;
+        margin-top:10px;
+        font-size:1.2em;
+        font-weight:700;
     }
 
-    .product p {
-        font-size: 1.1em;
-        color: #333;
+    .price{
+        color:#233416;
+        font-weight:700;
+        margin-top:5px;
+        font-size:1.1em;
     }
 
-    .contact {
-        text-align: center;
-        padding: 40px 20px;
-        background-color: #f2e4d5; /* بيج رملي */
+    /* التواصل */
+    .contact{
+        text-align:center;
+        padding:40px 20px;
+        background:#e7d8bd;
     }
 
-    .contact a {
-        display: inline-block;
-        margin: 8px;
-        padding: 12px 22px;
-        background: #556b2f; /* زيتى داكن */
-        color: white;
-        text-decoration: none;
-        border-radius: 6px;
-        font-family: 'Montserrat', sans-serif;
+    .contact h2{
+        font-family:'Montserrat',sans-serif;
+        color:#233416;
     }
 
-    .contact a:hover {
-        background: #445c27; /* داكن شويه */
+    .contact a{
+        display:inline-block;
+        margin:8px;
+        padding:12px 22px;
+        background:#233416;
+        color:white;
+        text-decoration:none;
+        border-radius:7px;
+        font-family:'Montserrat',sans-serif;
+        font-size:16px;
     }
 
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #556b2f; /* زيتى داكن */
-        color: white;
-        font-family: 'Montserrat', sans-serif;
+    .contact a i{
+        margin-right:8px;
+    }
+
+    .contact a:hover{
+        background:#19250f;
+    }
+
+    footer{
+        text-align:center;
+        padding:20px;
+        background:#233416;
+        color:white;
+        font-family:'Montserrat',sans-serif;
     }
 
 </style>
@@ -107,42 +125,50 @@
 <body>
 
 <header>
-    <h1>MARWAL</h1>
-    <p>Handmade Boho Macrame Products – View Prices & Contact Us</p>
+    <h1>Marwal</h1>
+    <p>Handmade Boho Macrame Products</p>
 </header>
 
 <section class="products">
     <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+1" alt="Product 1">
+        <img src="https://via.placeholder.com/280x180.png?text=Product+1">
         <h3>Macrame Bag</h3>
-        <p>Price: 250 EGP</p>
+        <p class="price">250 EGP</p>
     </div>
+
     <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+2" alt="Product 2">
+        <img src="https://via.placeholder.com/280x180.png?text=Product+2">
         <h3>Wall Hanging</h3>
-        <p>Price: 180 EGP</p>
+        <p class="price">180 EGP</p>
     </div>
+
     <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+3" alt="Product 3">
+        <img src="https://via.placeholder.com/280x180.png?text=Product+3">
         <h3>Keychain</h3>
-        <p>Price: 80 EGP</p>
+        <p class="price">80 EGP</p>
     </div>
+
     <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+4" alt="Product 4">
+        <img src="https://via.placeholder.com/280x180.png?text=Product+4">
         <h3>Dreamcatcher</h3>
-        <p>Price: 200 EGP</p>
+        <p class="price">200 EGP</p>
     </div>
 </section>
 
 <section class="contact">
     <h2>Contact Us</h2>
-    <a href="https://wa.me/YourWhatsAppNumber" target="_blank">WhatsApp</a>
-    <a href="https://instagram.com/yourinstagram" target="_blank">Instagram</a>
-    <a href="https://m.me/YourFacebookUsername" target="_blank">Messenger</a>
+
+    <a href="https://www.instagram.com/marwal.11?igsh=MXJjMWE5c3l5MG1tbQ==" target="_blank">
+        <i class="fab fa-instagram"></i>Instagram
+    </a>
+
+    <a href="https://www.facebook.com/share/1ASA6T4iAu/" target="_blank">
+        <i class="fab fa-facebook"></i>Facebook
+    </a>
 </section>
 
 <footer>
-    <p>&copy; 2025 MARWAL. All rights reserved.</p>
+    <p>© 2025 Marwal Handmade</p>
 </footer>
 
 </body>
