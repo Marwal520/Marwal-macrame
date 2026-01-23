@@ -3,7 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Marwal Handmade</title>
+
+<!-- Meta Tags -->
+<meta property="og:title" content="Marwal - Handmade Boho Macrame Products">
+<meta property="og:description" content="أفضل قطع مكرمية يدوية لـ Ramadan والمناسبات من Marwal">
+<meta property="og:image" content="https://i.postimg.cc/mr6mnwjG/FB-IMG-1754667050037.jpg">
+<meta property="og:url" content="https://marwal520.github.io/MARWAL/">
+<meta property="og:type" content="website">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -12,114 +20,134 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
 <style>
-    body{
-        font-family:'Roboto',sans-serif;
-        margin:0;
-        padding:0;
-        background:#e7d8bd; /* بيج رملي */
-        color:#333;
-    }
+body{
+    font-family:'Roboto',sans-serif;
+    margin:0;
+    padding:0;
+    background:#f5f0e4; /* بيج فاتح */
+    color:#333;
+}
 
-    header{
-        text-align:center;
-        padding:70px 20px;
-        background:#233416; /* زيتي داكن أشيك */
-    }
+/* ================= Header ================= */
+header{
+    position:relative;
+    text-align:center;
+    padding:80px 20px;
+    overflow:hidden;
+}
 
+header::before{
+    content:"";
+    position:absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: url('https://i.postimg.cc/mr6mnwjG/FB-IMG-1754667050037.jpg') center/cover no-repeat;
+    filter: blur(8px) brightness(0.6);
+    z-index:0;
+}
+
+header h1, header p{
+    position:relative;
+    z-index:1;
+}
+
+header h1{
+    font-family:'Great Vibes',cursive;
+    font-size:5em;
+    color:#f5e6c8;
+    margin:0;
+}
+
+header p{
+    font-family:'Montserrat',sans-serif;
+    color:#f5e6c8;
+    margin-top:10px;
+    font-size:1.3em;
+}
+
+/* ================= Categories ================= */
+.categories{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:50px 20px;
+}
+
+.category{
+    background:#233416;
+    border-radius:16px;
+    margin:15px;
+    width:260px;
+    text-align:center;
+    padding:30px 20px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.15);
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.category:hover{
+    transform: translateY(-8px) scale(1.05);
+    box-shadow:0 15px 25px rgba(0,0,0,0.2);
+}
+
+.category h3{
+    font-family:'Montserrat',sans-serif;
+    color:#f5e6c8;
+    font-weight:700;
+    font-size:1.5em;
+    margin:0;
+}
+
+/* ================= Contact ================= */
+.contact{
+    text-align:center;
+    padding:50px 20px;
+    background:#f5f0e4;
+}
+
+.contact a{
+    display:inline-block;
+    margin:10px;
+    padding:14px 26px;
+    background:#233416;
+    color:#f5e6c8;
+    text-decoration:none;
+    border-radius:8px;
+    font-family:'Montserrat',sans-serif;
+    font-size:16px;
+    transition: all 0.3s ease;
+}
+
+.contact a i{
+    margin-right:10px;
+}
+
+.contact a:hover{
+    background:#19250f;
+}
+
+/* ================= Footer ================= */
+footer{
+    text-align:center;
+    padding:25px;
+    background:#233416;
+    color:#f5e6c8;
+    font-family:'Montserrat',sans-serif;
+}
+
+/* ================= Responsive ================= */
+@media(max-width:768px){
     header h1{
-        font-family:'Great Vibes',cursive;
-        font-size:4.5em;
-        color:#e7d8bd;  /* اسم Marwal بيج رملي */
-        margin:0;
+        font-size:3.5em;
     }
-
     header p{
-        font-family:'Montserrat',sans-serif;
-        color:#f5f5dc;
-        margin-top:10px;
-        font-size:1.2em;
-    }
-
-    /* قسم المنتجات */
-    .products{
-        display:flex;
-        flex-wrap:wrap;
-        justify-content:center;
-        padding:40px 20px;
-    }
-
-    .product{
-        background:white;
-        border-radius:14px;
-        margin:15px;
-        width:280px;
-        text-align:center;
-        padding:15px;
-        box-shadow:0 8px 15px rgba(0,0,0,0.12);
-    }
-
-    .product img{
-        width:100%;
-        height:180px;
-        object-fit:cover;
-        border-radius:12px;
-    }
-
-    .product h3{
-        font-family:'Montserrat',sans-serif;
-        color:#233416;
-        margin-top:10px;
-        font-size:1.2em;
-        font-weight:700;
-    }
-
-    .price{
-        color:#233416;
-        font-weight:700;
-        margin-top:5px;
         font-size:1.1em;
     }
-
-    /* التواصل */
-    .contact{
-        text-align:center;
-        padding:40px 20px;
-        background:#e7d8bd;
+    .category{
+        width:90%;
+        padding:25px 15px;
     }
-
-    .contact h2{
-        font-family:'Montserrat',sans-serif;
-        color:#233416;
-    }
-
-    .contact a{
-        display:inline-block;
-        margin:8px;
-        padding:12px 22px;
-        background:#233416;
-        color:white;
-        text-decoration:none;
-        border-radius:7px;
-        font-family:'Montserrat',sans-serif;
-        font-size:16px;
-    }
-
-    .contact a i{
-        margin-right:8px;
-    }
-
-    .contact a:hover{
-        background:#19250f;
-    }
-
-    footer{
-        text-align:center;
-        padding:20px;
-        background:#233416;
-        color:white;
-        font-family:'Montserrat',sans-serif;
-    }
-
+}
 </style>
 </head>
 <body>
@@ -129,39 +157,29 @@
     <p>Handmade Boho Macrame Products</p>
 </header>
 
-<section class="products">
-    <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+1">
-        <h3>Macrame Bag</h3>
-        <p class="price">250 EGP</p>
-    </div>
-
-    <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+2">
+<section class="categories">
+    <div class="category" onclick="window.location.href='wall-hanging.html'">
         <h3>Wall Hanging</h3>
-        <p class="price">180 EGP</p>
     </div>
 
-    <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+3">
-        <h3>Keychain</h3>
-        <p class="price">80 EGP</p>
+    <div class="category" onclick="window.location.href='bag.html'">
+        <h3>Bag</h3>
     </div>
 
-    <div class="product">
-        <img src="https://via.placeholder.com/280x180.png?text=Product+4">
-        <h3>Dreamcatcher</h3>
-        <p class="price">200 EGP</p>
+    <div class="category" onclick="window.location.href='ramadan-decoration.html'">
+        <h3>Ramadan Decoration</h3>
+    </div>
+
+    <div class="category" onclick="window.location.href='other.html'">
+        <h3>Other</h3>
     </div>
 </section>
 
 <section class="contact">
     <h2>Contact Us</h2>
-
-    <a href="https://www.instagram.com/marwal.11?igsh=MXJjMWE5c3l5MG1tbQ==" target="_blank">
+    <a href="https://www.instagram.com/marwal.eg?igsh=MXJjMWE5c3l5MG1tbQ==" target="_blank">
         <i class="fab fa-instagram"></i>Instagram
     </a>
-
     <a href="https://www.facebook.com/share/1ASA6T4iAu/" target="_blank">
         <i class="fab fa-facebook"></i>Facebook
     </a>
