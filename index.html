@@ -5,13 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Marwal Handmade</title>
 
-<!-- Meta Tags للمعاينة على وسائل التواصل -->
-<meta property="og:title" content="Marwal - Handmade Boho Macrame Products">
-<meta property="og:description" content="أفضل قطع مكرمية يدوية لـ Ramadan والمناسبات من Marwal">
-<meta property="og:image" content="https://i.postimg.cc/mr6mnwjG/FB-IMG-1754667050037.jpg">
-<meta property="og:url" content="https://marwal520.github.io/MARWAL/">
-<meta property="og:type" content="website">
-
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
@@ -27,50 +20,48 @@ body{
     color:#333;
 }
 
-/* ===== Slider ===== */
-.slider{
+/* ===== Header ===== */
+header{
     position:relative;
-    width:100%;
-    height:450px;
-    overflow:hidden;
-}
-
-.slide{
-    position:absolute;
-    width:100%;
-    height:100%;
-    background-size:cover;
-    background-position:center;
-    filter:blur(3px) brightness(0.6);
-    opacity:0;
-    transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-    opacity:1;
-}
-
-.slider-text{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-    color:#f5f5dc;
+    background:#233416;
+    color:#f5e6c8;
+    padding:30px 20px;
     text-align:center;
     font-family:'Great Vibes',cursive;
-}
-
-.slider-text h2{
     font-size:3.5em;
-    margin:0;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
 }
 
-.slider-text p{
-    font-size:1.3em;
-    margin-top:10px;
+/* ===== New Collection Slider ===== */
+.new-collection-container{
+    padding:20px 0;
+    overflow-x:auto;
+    white-space:nowrap;
+    background:linear-gradient(to right, rgba(255,255,255,0.2), rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-overflow-scrolling: touch;
 }
 
-/* ===== Header Categories ===== */
+.new-collection-item{
+    display:inline-block;
+    background:#233416;
+    color:#f5e6c8;
+    padding:40px 30px;
+    margin:0 15px;
+    border-radius:20px;
+    font-family:'Montserrat',sans-serif;
+    font-size:1.2em;
+    font-weight:700;
+    cursor:pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.new-collection-item:hover{
+    transform: translateY(-10px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== Categories Buttons ===== */
 .categories{
     display:flex;
     flex-wrap:wrap;
@@ -82,23 +73,24 @@ body{
     background:#233416;
     border-radius:14px;
     margin:15px;
-    width:250px;
+    width:220px;
     text-align:center;
     padding:25px 15px;
     box-shadow:0 8px 18px rgba(0,0,0,0.12);
     cursor:pointer;
-    transition:transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .category:hover{
     transform: translateY(-8px);
+    box-shadow:0 12px 25px rgba(0,0,0,0.25);
 }
 
 .category h3{
     font-family:'Montserrat',sans-serif;
     color:#e7d8bd;
     font-weight:700;
-    font-size:1.4em;
+    font-size:1.3em;
     margin:0;
 }
 
@@ -137,35 +129,39 @@ footer{
     color:white;
     font-family:'Montserrat',sans-serif;
 }
+
+/* ===== Scrollbar Hidden for Slider ===== */
+.new-collection-container::-webkit-scrollbar{
+    display:none;
+}
 </style>
 </head>
+
 <body>
 
-<!-- ===== Slider ===== -->
-<div class="slider">
-    <div class="slide active" style="background-image:url('https://i.postimg.cc/mr6mnwjG/FB-IMG-1754667050037.jpg');"></div>
-    <div class="slide" style="background-image:url('https://i.postimg.cc/4NchP1dB/slider2.jpg');"></div>
-    <div class="slide" style="background-image:url('https://i.postimg.cc/NjJ1JHdy/slider3.jpg');"></div>
-    <div class="slider-text">
-        <h2>New Collection</h2>
-        <p>Handmade Boho Macrame Products</p>
-    </div>
-</div>
+<header>
+    Marwal
+</header>
+
+<!-- ===== New Collection Slider ===== -->
+<section class="new-collection-container">
+    <div class="new-collection-item" onclick="window.location.href='new-collection.html'">New Collection 1</div>
+    <div class="new-collection-item" onclick="window.location.href='new-collection.html'">New Collection 2</div>
+    <div class="new-collection-item" onclick="window.location.href='new-collection.html'">New Collection 3</div>
+    <div class="new-collection-item" onclick="window.location.href='new-collection.html'">New Collection 4</div>
+</section>
 
 <!-- ===== Categories ===== -->
 <section class="categories">
     <div class="category" onclick="window.location.href='wall-hanging.html'">
         <h3>Wall Hanging</h3>
     </div>
-
     <div class="category" onclick="window.location.href='bag.html'">
         <h3>Bag</h3>
     </div>
-
     <div class="category" onclick="window.location.href='ramadan-decoration.html'">
         <h3>Ramadan Decoration</h3>
     </div>
-
     <div class="category" onclick="window.location.href='other.html'">
         <h3>Other</h3>
     </div>
@@ -173,28 +169,18 @@ footer{
 
 <!-- ===== Contact ===== -->
 <section class="contact">
-<h2>Contact Us</h2>
-
-<a href="https://www.instagram.com/marwal.eg" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
-<a href="https://www.facebook.com/MN.marwal" target="_blank"><i class="fab fa-facebook"></i>Facebook</a>
+    <h2>Contact Us</h2>
+    <a href="https://www.instagram.com/marwal.eg?igsh=MXJjMWE5c3l5MG1tbQ==" target="_blank">
+        <i class="fab fa-instagram"></i>Instagram
+    </a>
+    <a href="https://www.facebook.com/share/1ASA6T4iAu/" target="_blank">
+        <i class="fab fa-facebook"></i>Facebook
+    </a>
 </section>
 
-<!-- ===== Footer ===== -->
 <footer>
-<p>© 2025 Marwal Handmade</p>
+    <p>© 2026 Marwal Handmade</p>
 </footer>
-
-<script>
-// Slider Script
-let slides = document.querySelectorAll('.slide');
-let index = 0;
-
-setInterval(()=>{
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-},5000);
-</script>
 
 </body>
 </html>
